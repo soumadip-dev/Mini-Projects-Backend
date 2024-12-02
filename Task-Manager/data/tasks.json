@@ -12,5 +12,40 @@
     "description": "Finish the DBMS assignment and submit it on the college portal.",
     "userName": "marinaPanda",
     "complete": false
+  },
+  {
+    "id": "bd5e11d9-ea8e-4265-b21b-7950fba76913",
+    "title": "Play Football",
+    "description": "Join friends for a fun and energetic game of football at the local field. Great for fitness and teamwork.",
+    "userName": "soumadipMajila",
+    "complete": false
+  },
+  {
+    "id": "5f011516-132e-4182-bcdd-38f8cc81e41c",
+    "title": "Study Data Structures",
+    "description": "Review and practice key concepts in data structures like arrays, linked lists, stacks, and trees for upcoming exams.",
+    "userName": "soumadipMajila",
+    "complete": false
+  },
+  {
+    "id": "8d1fc8c0-3ee6-404b-80b5-5f0eb3b9eeb2",
+    "title": "Watch a Movie",
+    "description": "Relax and enjoy a good film, either alone or with friends. A great way to unwind after a busy day.",
+    "userName": "soumadipMajila",
+    "complete": false
+  },
+  {
+    "id": "28c55b98-8d43-4d11-84a8-c715589393fb",
+    "title": "Go to GYM - Updated",
+    "description": "Workout for 2 hours with extra focus on cardio.",
+    "userName": "marinaPanda",
+    "complete": true
+  },
+  {
+    "id": "7a5e6c51-067a-43bc-ac27-921f085e5f46",
+    "title": "Study Data Structures",
+    "description": "Review and practice key concepts in data structures like arrays, linked lists, stacks, and trees for upcoming exams.",
+    "userName": "marinaPanda",
+    "complete": true
   }
 ]
