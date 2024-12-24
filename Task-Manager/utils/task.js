@@ -43,6 +43,19 @@ export const deleteTaskById = taskId => {
   }
 };
 
+// Function to update a task by ID
+export const updateTaskById = (taskId, updatedTask) => {
+  try {
+    const tasks = readTask();
+    const updatedTasksAfterUpdate = tasks.map(task => (task.id === taskId ? updatedTask : task));
+    writeTask(updatedTasksAfterUpdate);
+    return updatedTasksAfterUpdate;
+  } catch (error) {
+    console.error('Failed to update task', error);
+    return [];
+  }
+};
+
 // Ensure the tasks file exists; create it if not
 const ensureFileExists = () => {
   try {
