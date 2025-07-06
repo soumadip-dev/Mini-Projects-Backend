@@ -2,26 +2,24 @@ import { Router } from 'express';
 
 const router = Router();
 
-// Handle get all tasks request
+// Route to get all tasks
 router.get('/', (req, res) => {
   // TODO: Implement get all tasks logic
 });
 
-// Handle create task request
+// Route to create a new task
 router.post('/', (req, res) => {
   // TODO: Implement create task logic
 });
 
-// Handle update task request
+// Route to update an existing task
 router.put('/:id', (req, res) => {
   // TODO: Implement update task logic
 });
 
-// Handle delete task request
+// Route to delete a task
 router.delete('/:id', (req, res) => {
   // TODO: Implement delete task logic
 });
 
-// Export the router
 export default router;
-
