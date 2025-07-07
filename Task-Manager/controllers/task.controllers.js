@@ -87,7 +87,6 @@ export const updateTask = async (req, res) => {
 // Controller to delete a task
 
 export const deleteTask = async (req, res) => {
-  /*
   // Check if user is authenticated
   if (!req.session.user) {
     return res.status(401).json({
@@ -95,11 +94,13 @@ export const deleteTask = async (req, res) => {
       error: 'Unauthorized',
     });
   }
-  // Get ID from the request parameters
+  //  Get the task id from the parameters
   const { id } = req.params;
 
-  // Check if the ID is valid and the task belongs to the current user
+  // Read existing tasks
   const tasks = await readTask();
+
+  // Check if the id is valid and the task belongs to the current user
   const taskToDelete = tasks.find(
     task => task.id === id && task.userName === req.session.user.userName
   );
@@ -110,6 +111,12 @@ export const deleteTask = async (req, res) => {
     });
   }
 
-  // Delte the task
-  */
+  // Delete the task now
+  await deleteTaskById(id);
+
+  // Respond with success
+  res.status(200).json({
+    success: true,
+    message: 'Task deleted successfully',
+  });
 };
