@@ -8,10 +8,10 @@
   },
   {
     "id": "b5c3e60d-5456-4de1-a0d3-8586b5229243",
-    "title": "Complete assignment",
-    "description": "Finish the DBMS assignment and submit it on the college portal.",
+    "title": "Study Data Structures",
+    "description": "Review and practice key concepts in data structures like arrays, linked lists, stacks, and trees for upcoming exams.",
     "userName": "marinaPanda",
-    "complete": false
+    "complete": true
   },
   {
     "id": "bd5e11d9-ea8e-4265-b21b-7950fba76913",

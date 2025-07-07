@@ -46,6 +46,7 @@ export const deleteTaskById = taskId => {
 // Function to update a task by ID
 export const updateTaskById = (taskId, updatedFields) => {
   try {
+    ensureFileExists();
     const tasks = readTask();
     const updatedTasks = tasks.map(task => {
       if (task.id === taskId) {
