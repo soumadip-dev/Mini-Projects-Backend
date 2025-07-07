@@ -33,6 +33,7 @@ export const writeTask = tasks => {
 // Function to delete a task by ID
 export const deleteTaskById = taskId => {
   try {
+    ensureFileExists();
     const tasks = readTask();
     const updatedTasksAfterDelete = tasks.filter(task => task.id !== taskId);
     writeTask(updatedTasksAfterDelete);
