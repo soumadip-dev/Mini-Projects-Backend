@@ -1,4 +1,4 @@
-import { readTask, writeTask } from '../utils/task.js';
+import { readTask, writeTask, updateTaskById, deleteTaskById } from '../utils/task.js';
 import crypto from 'crypto';
 
 // Controller to get all tasks for the logged-in user
@@ -69,13 +69,14 @@ export const updateTask = async (req, res) => {
     });
   }
 
-  // Update the task with the new values if new value is provided
-  if (title) taskToUpdate.title = title;
-  if (description) taskToUpdate.description = description;
-  if (complete !== undefined) taskToUpdate.complete = complete;
+  // Make an updated task using updated value
+  const updatedTask = {};
+  if (title !== undefined) updatedTask.title = title;
+  if (description !== undefined) updatedTask.description = description;
+  if (complete !== undefined) updatedTask.complete = complete;
 
-  // Save updated task list
-  await writeTask(tasks);
+  // Update the task now
+  await updateTaskById(id, updatedTask);
 
   res.status(200).json({
     success: true,
@@ -84,4 +85,31 @@ export const updateTask = async (req, res) => {
 };
 
 // Controller to delete a task
-export const deleteTask = (req, res) => {};
+
+export const deleteTask = async (req, res) => {
+  /*
+  // Check if user is authenticated
+  if (!req.session.user) {
+    return res.status(401).json({
+      success: false,
+      error: 'Unauthorized',
+    });
+  }
+  // Get ID from the request parameters
+  const { id } = req.params;
+
+  // Check if the ID is valid and the task belongs to the current user
+  const tasks = await readTask();
+  const taskToDelete = tasks.find(
+    task => task.id === id && task.userName === req.session.user.userName
+  );
+  if (!taskToDelete) {
+    return res.status(404).json({
+      success: false,
+      error: 'Task not found or does not belong to the current user',
+    });
+  }
+
+  // Delte the task
+  */
+};
