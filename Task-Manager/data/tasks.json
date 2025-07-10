@@ -1,0 +1,16 @@
+[
+  {
+    "id": "3eaaf21d-1824-42cf-a202-4026b3cf0db2",
+    "title": "Go to GYM",
+    "description": "Workout for at least 1 hour including cardio and weights.",
+    "userName": "soumadipMajila",
+    "complete": false
+  },
+  {
+    "id": "b5c3e60d-5456-4de1-a0d3-8586b5229243",
+    "title": "Complete assignment",
+    "description": "Finish the DBMS assignment and submit it on the college portal.",
+    "userName": "marinaPanda",
+    "complete": false
+  }
+]
