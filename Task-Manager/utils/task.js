@@ -30,6 +30,19 @@ export const writeTask = tasks => {
   }
 };
 
+// Function to delete a task by ID
+export const deleteTaskById = taskId => {
+  try {
+    const tasks = readTask();
+    const updatedTasksAfterDelete = tasks.filter(task => task.id !== taskId);
+    writeTask(updatedTasksAfterDelete);
+    return updatedTasksAfterDelete;
+  } catch (error) {
+    console.error('Failed to delete task', error);
+    return [];
+  }
+};
+
 // Ensure the tasks file exists; create it if not
 const ensureFileExists = () => {
   try {
